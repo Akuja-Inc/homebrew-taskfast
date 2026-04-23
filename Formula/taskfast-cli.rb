@@ -1,25 +1,25 @@
 class TaskfastCli < Formula
   desc "`taskfast` CLI: worker + poster hot-loop operations, JSON-envelope output."
   homepage "https://github.com/Akuja-Inc/taskfast-cli"
-  version "0.4.2"
+  version "0.4.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.2/taskfast-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "9d04226703c6d67031c4422ded97b43cc7973c0bc6d26e1c81cfff14058a64be"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.3/taskfast-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "f20062be6727556c1ae49e6f80c6d40b4a3b25c8fd7e0aacd3ef9acb6c7630d3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.2/taskfast-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "5ade71a029d2bae6e5782da46c8f5d1fa01bd45a3f5e7a2cd75d2de6c9df63f5"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.3/taskfast-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "f425b3856f1b75cb60e2c8363bab85e6c651136f3758e624a9b19aef9299e594"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.2/taskfast-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "056f9e88d54708bf45e646f92d6dabaac09fad0f49d2e39dcde78c7e9f675efe"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.3/taskfast-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fff0d0ca58c3cf516c99918e98551281817aadb723ae60ba260a616802eaa539"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.2/taskfast-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5b56573fcf990cbb714c03e7fcfdde55cfad97fe15ca68bfa232fe294e1b7a99"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.4.3/taskfast-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "886ed744c8561e37b53817e816da4cc90b03be17866d068504de907dfff3c84c"
     end
   end
   license "MIT"
