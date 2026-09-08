@@ -1,25 +1,25 @@
 class TaskfastCli < Formula
   desc "`taskfast` CLI: worker + poster hot-loop operations, JSON-envelope output."
   homepage "https://github.com/Akuja-Inc/taskfast-cli"
-  version "0.17.3"
+  version "0.18.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.17.3/taskfast-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "5c5621efc8b22214410b517a5cb7d9d86ebcbf9544f091d5beb001d12d05435d"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.18.0/taskfast-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "3cd3edfb7ad19942e1c0636d62192fc7fd62ae03fbeab7d9e12f3d2033fc944e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.17.3/taskfast-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "c84a396f030980db897b731f9fa2e14bb150fdad4fba4f9e6918832f1efa6de7"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.18.0/taskfast-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "5db18289b35c68873242863d9aed00a9d6d28de73dbf49dba51ab3fc1433fc45"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.17.3/taskfast-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1f527c2593890e8695aa71e3264329e1864d5d7cb8b83f9fea2d945c7556e9af"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.18.0/taskfast-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9b54a22c0d92686fc69dff3be43dcb8494e2e44b5744efb2cb35bf8ddee9ac71"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.17.3/taskfast-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a98ef9d5d76301c0bd0d5c6eb09296686d458f45331586bd1c56db622a96ed71"
+      url "https://github.com/Akuja-Inc/taskfast-cli/releases/download/taskfast-cli-v0.18.0/taskfast-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "18315329601b1b31980b7d6f9657cb30f17e47caaaa00044c5be1eaf20a4a855"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class TaskfastCli < Formula
   end
 
   def install
-    bin.install "taskfast" if OS.mac? && Hardware::CPU.arm?
-    bin.install "taskfast" if OS.mac? && Hardware::CPU.intel?
-    bin.install "taskfast" if OS.linux? && Hardware::CPU.arm?
-    bin.install "taskfast" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "taskfast"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "taskfast"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "taskfast"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "taskfast"
+    end
 
     install_binary_aliases!
 
